@@ -1,0 +1,22 @@
+document.getElementById('login-btn').addEventListener('click', function(){
+    // get user input
+    const username = document.getElementById('username');
+    const user = username.value;
+    console.log(user);
+    
+    // get the password
+    const password = document.getElementById('password');
+    const pass = password.value;
+    console.log(pass);
+    
+    //condition
+    if(user == 'admin' && pass == 'admin123')
+    {
+        localStorage.setItem("isLoggedIn", "true");  //check the home.js
+        alert('Sign In Successful');
+        window.location.href = "home.html";//going to home page
+    }
+    else{
+        alert('signin failed');
+    }
+});
